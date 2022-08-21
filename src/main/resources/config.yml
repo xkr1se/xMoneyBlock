@@ -44,10 +44,7 @@ commands:
   reload:
     description: '/xmoneyblock reload - Перезагрузка конфига'
     success: 'Успешно перезагружено!'
-  respawn:
-    description: '/xmoneyblock reload - Перезагрузка конфига'
-    success: 'Успешно перезагружено!'
-
+    
 #Команды которые выполнятся после ломания (только от консоли)
 commands-completed:
   - 'p give %player% 100'
