@@ -47,9 +47,6 @@ public class ConfigData {
     String helpDesc;
     String reloadDesc;
     String reloadSuccess;
-    String respawnDesc;
-    String respawnSuccess;
-
 
     /**
      * Конструктор - инициализия всех переменных из конфига
@@ -84,14 +81,11 @@ public class ConfigData {
         this.helpDesc = s(configuration.getString("commands.help.description"));
         this.reloadDesc = s(configuration.getString("commands.reload.description"));
         this.reloadSuccess = s(configuration.getString("commands.reload.success"));
-        this.respawnDesc = s(configuration.getString("commands.respawn.description"));
-        this.respawnSuccess = s(configuration.getString("commands.respawn.success"));
 
         this.helpSuccess = Collections.unmodifiableList(
                 new ArrayList<String>() {
                     {
                         add(getReloadDesc());
-                        add(getRespawnDesc());
                     }
                 }
         );
