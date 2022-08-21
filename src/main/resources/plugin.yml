@@ -1,0 +1,12 @@
+name: xMoneyBlock
+version: '${version}'
+main: xkr1se.xmoneyblock.Main
+api-version: 1.16
+depend: [ HolographicDisplays ]
+authors: [ xkr1se ]
+description: Спавнит блок за уничтожение которого игрок получит награду.
+commands:
+  xmoneyblock:
+    description: 'Главная команда'
+    aliases:
+      - xmb

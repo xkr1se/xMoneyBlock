@@ -1,0 +1,73 @@
+#Плагин разработан xkr1se - https://vk.com/xkr1se (цветовые кода сами настраивайте)
+#Настройки золотого блока
+settings:
+
+  #Время до удаления голдблока (в сек)
+  lifetime-block: 20
+  #Время респавна голдблока (в сек)
+  time-respawn: 30
+
+  #Еффект после ломания голдблока (тут блять брать - https://jd.papermc.io/paper/1.16/org/bukkit/Effect.html)
+  effect: true
+  effect-type: 'SMOKE:0' #ЕФФЕКТ:ДАТА
+
+  #Звук после ломания голдблока (тут блять брать - https://jd.papermc.io/paper/1.16/org/bukkit/Sound.html)
+  sound: true
+  sound-type: 'UI_TOAST_CHALLENGE_COMPLETE'
+  volume: 50
+
+  #Ограничения по спавну
+  x: 3000
+  z: 3000
+
+  #Мир в котором спавнить
+  world-spawn: 'world'
+
+#Настройки голограмы
+hologram:
+  #Тут долбаёб поймет
+  enable: true
+  #Тут тоже
+  text:
+    - '&6Золотой Блок'
+    - 'Осталось: %time%'
+
+#Настройки для команд
+#
+# Права:
+# - xmoneyblock.use - Использование команды /xmoneyblock
+# - xmoneyblock.help - Использование команды /xmoneyblock help
+# - xmoneyblock.reload - Использование команды /xmoneyblock reload
+commands:
+  help:
+    description: '/xmoneyblock help - Помощь по командам'
+  reload:
+    description: '/xmoneyblock reload - Перезагрузка конфига'
+    success: 'Успешно перезагружено!'
+
+#Команды которые выполнятся после ломания (только от консоли)
+commands-completed:
+  - 'p give %player% 100'
+
+#Настройки сообщений
+messages:
+  #прав нетю
+  no-perm: 'У вас нету прав'
+  #Не введена подкоманда
+  no-allowed: 'Неверный формат'
+  #Нету такой подкоманды
+  not-found-command: 'Подкоманда не найдена'
+  #Тока для игрокоф
+  only-player: 'Консолям низя'
+  #Когда голдблок заспавнился
+  block-spawn:
+    - '&aя заспавнился'
+    - 'вот тут &2%coordinates%'
+  #Когда голдблок удалился
+  block-despawn:
+    - 'моё время пришло...'
+    - 'я ухожу..'
+  #Когда голдблок сломали
+  block-destroy:
+    - '&cменя сломали'
+    - 'вот он меня сломал &a%player%'
