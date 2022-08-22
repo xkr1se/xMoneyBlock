@@ -89,7 +89,7 @@ public final class Main extends JavaPlugin {
      * Метод переинициализации переменных из конфига
      */
     public void reloadConfigData() {
-        this.configData = new ConfigData(getConfig());
         reloadConfig();
+        this.configData = new ConfigData(getConfig());
     }
 }
